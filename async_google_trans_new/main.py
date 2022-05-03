@@ -238,7 +238,7 @@ class AsyncTranslator:
                 # Request failed
                 raise TransError(tts=self)
         except Exception as e:
-            await s.close()
+            s.close()
             raise e
 
     async def detect(self, text):
@@ -306,7 +306,7 @@ class AsyncTranslator:
                 # Request failed
                 raise TransError(tts=self)
         except Exception as e:
-            await s.close()
+            s.close()
             raise e
 
     async def close(self):
